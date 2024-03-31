@@ -1,6 +1,6 @@
-# -Distributed-Health-Care-Management-System-Implementation-Using-Web-Service
+# Distributed-Health-Care-Management-System-Implementation-Using-WebService
 
-Overview
+## Overview
 
 
 They are three separate servers, each situated in a different city, make up the distributed health care management system (DHMS):
@@ -26,7 +26,7 @@ Functions exclusive to admin:
 	listAppointmentAvailability(): It returns the available spaces for appointment to the patient.
 
 
-Functions exclusive to Patient:
+### Functions exclusive to Patient:
 
 book appointment(): The function schedules the patient's appointment and modifies the available capacity in that appointment.
 
@@ -53,7 +53,7 @@ For example: ”MTLA120324” represents Montreal(MTL),Afternoon(A)
 ,120324(day/month/year).
 
 
-Implementation
+## Implementation
 
 	In this project, I created the main server file and publish the endpoint using the Endpoint class.
 
@@ -83,13 +83,13 @@ Implementation
 
 	The hardest part of the implementation for me in this project is the swap appointment. Because to fetch the appointment from another server we have to establish intercommunication between them which it requires UDP/IP sockets.
 
-Class Diagram
+## Class Diagram
 
 ![image](https://github.com/naveen777-github/-Distributed-Health-Care-Management-System-Implementation-Using-Web-Service/assets/85072641/23a76737-0c84-43b7-8c5e-1656606c0a64)
 
 ![image](https://github.com/naveen777-github/-Distributed-Health-Care-Management-System-Implementation-Using-Web-Service/assets/85072641/337ae482-0475-44e3-b5c6-65c6bd5abb88)
 
-Data Structures
+## Data Structures
 
 Outer Hash Map: This is the primary data structure, implemented using a concurrent hash map. It associates appointment types (strings) with appointment IDs and details. The appointment type serves as the key, and the value associated with each type is another concurrent hash map.
 
@@ -106,7 +106,7 @@ Appointment Details: For each appointment ID in the inner concurrent hash map, t
 
 ![image](https://github.com/naveen777-github/-Distributed-Health-Care-Management-System-Implementation-Using-Web-Service/assets/85072641/69cbccfd-57c8-4c03-af57-cb96a674ba86)
 
-Working of Data structure:
+### Working of Data structure:
 
 	You can access the inner concurrent hash map by first looking up the appointment type in the outer concurrent hash map.
 
@@ -114,37 +114,37 @@ Working of Data structure:
 
 	With the appointment ID, you can retrieve both the patient ID list and the capacity for that appointment.
 
-Test Cases
+## Test Cases
 
-1)Admin
-   Do's:
+### 1)Admin
+   #### Do's:
         Admin able to perform both   patient and admin operations
         Admin can add an appointment
         Admin can remove an appointment
         Admin can list appointment's availability
         Admin can fetch appointment availabilities from other cities as well
-   Don't's:
+  #### Don't's:
         Admin is unable to add an appointment for the same appointment type if one already exists
         Admin is unable to perform deletion if there is no appointment
         Admin was unable to book an appointment on the same day
         Admin was unable to book an appointment if it reached the capacity of the appointment type
         Admin was unable to book an appointment if the patient ID already exists
         Admin was unable to cancel the appointment if there was no appointment ID and patient ID
-2)Patient
-     Do's:    
+### 2)Patient
+     #### Do's:    
         Patients can book an appointment  
         Patients can get an appointment schedule
         Patients can cancel an appointment
         Patients can swap an appointment
-     Don't's:	
+     #### Don't's:	
         Patients were unable to book an appointment on the same day
         Patients were unable to book an appointment if it reached the capacity of the appointment type
-	      Patients were unable to book an appointment if the patient ID already exists
-		    Patients were unable to book an appointment if the patient ID, Appointment Type, or Appointment ID was Null	
+	Patients were unable to book an appointment if the patient ID already exists
+        Patients were unable to book an appointment if the patient ID, Appointment Type, or Appointment ID was Null	
         Patients were unable to cancel the appointment if there was no appointment ID and patient ID
         Patients can’t do every operation like admin.
         Patients can swap an appointment
-	      Do not swap if you cannot insert the patient into a new appointment.
+	Do not swap if you cannot insert the patient into a new appointment.
         Do not swap if you cannot cancel an old appointment.		
         Do not swap if there is no availability to book.		
         Do not swap if the patient has booked an old appointment.
