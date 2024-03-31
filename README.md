@@ -17,26 +17,25 @@ There are two categories of agents for this system:
 We need to ensure that these agents are using Webservices to communicate with the other servers using SOAP.
 
 
-Functions exclusive to admin:
+### Functions exclusive to admin:
 
-	addAppointment(): By using this function admin can add an appointment to the server. The admin cannot add an appointment for the same appointment type if one already exists.
-
-	removeAppointment(): This allows the administrator to remove a booked appointment. No deletion has been made if there is no appointment. In the unlikely event that a patient has made an appointment and it is confirmed, cancel the appointment and make the patient's next available appointment.
-
-	listAppointmentAvailability(): It returns the available spaces for appointment to the patient.
+**addAppointment():** By using this function admin can add an appointment to the server. The admin cannot add an appointment for the same appointment type if one already exists.
+**#### removeAppointment():** This allows the administrator to remove a booked appointment. No deletion has been made if there is no appointment. In the unlikely event that a patient has made an appointment and 
+                              it is confirmed, cancel the appointment and make the patient's next available appointment.
+**#### listAppointmentAvailability():** It returns the available spaces for appointment to the patient.
 
 
 ### Functions exclusive to Patient:
 
-book appointment(): The function schedules the patient's appointment and modifies the available capacity in that appointment.
+**book appointment():** The function schedules the patient's appointment and modifies the available capacity in that appointment.
 
 
-getAppointmentSchedule(): By using this function we able to get appointments from all the cities, Montreal, Quebec and Sherbrooke, should be displayed.
+**getAppointmentSchedule():** By using this function we able to get appointments from all the cities, Montreal, Quebec and Sherbrooke, should be displayed.
 
 
-cancelAppointment():To locate the appointment ID and delete the appointment, it searches the hash map.
+**cancelAppointment():** To locate the appointment ID and delete the appointment, it searches the hash map.
 
-swapAppointment(): To swap the patient ID from one appointment ID to another appointment ID.
+**swapAppointment():** To swap the patient ID from one appointment ID to another appointment ID.
 
 
 A unique adminID and patientID, respectively, are used to identify administrators and patients.
@@ -49,8 +48,7 @@ There are three types of appointments dental, surgeon, and physician.
 
 The appointment ID is a combination of four characters and six integers.
 
-For example: ”MTLA120324” represents Montreal(MTL),Afternoon(A)
-,120324(day/month/year).
+**For example:** ”MTLA120324” represents Montreal(MTL),Afternoon(A),120324(day/month/year).
 
 
 ## Implementation
@@ -91,16 +89,16 @@ For example: ”MTLA120324” represents Montreal(MTL),Afternoon(A)
 
 ## Data Structures
 
-Outer Hash Map: This is the primary data structure, implemented using a concurrent hash map. It associates appointment types (strings) with appointment IDs and details. The appointment type serves as the key, and the value associated with each type is another concurrent hash map.
+**Outer Hash Map:** This is the primary data structure, implemented using a concurrent hash map. It associates appointment types (strings) with appointment IDs and details. The appointment type serves as the key, and the value associated with each type is another concurrent hash map.
 
-Inner Hash Map: The value associated with each appointment type in the outer concurrent hash map is itself a concurrent hash map. This inner concurrent hash map contains appointment IDs as keys and appointment details as values.
+**Inner Hash Map:** The value associated with each appointment type in the outer concurrent hash map is itself a concurrent hash map. This inner concurrent hash map contains appointment IDs as keys and appointment details as values.
 
 
-Appointment Details: For each appointment ID in the inner concurrent hash map, the associated details include:
+**Appointment Details:** For each appointment ID in the inner concurrent hash map, the associated details include:
 
-•	Patient ID List: This is an array list containing the IDs of patients scheduled for the appointment. It is a list of strings.
+•	**Patient ID List:** This is an array list containing the IDs of patients scheduled for the appointment. It is a list of strings.
 
-•	Capacity: This is an integer representing the maximum number of patients that can be scheduled for an appointment.
+•	**Capacity**: This is an integer representing the maximum number of patients that can be scheduled for an appointment.
 
 ![image](https://github.com/naveen777-github/-Distributed-Health-Care-Management-System-Implementation-Using-Web-Service/assets/85072641/0dac795d-ca55-4d34-8a91-8a2abda58a6f)
 
@@ -117,26 +115,27 @@ Appointment Details: For each appointment ID in the inner concurrent hash map, t
 ## Test Cases
 
 ### 1)Admin
-   #### Do's:
+  **Do's:**
         Admin able to perform both   patient and admin operations
         Admin can add an appointment
         Admin can remove an appointment
         Admin can list appointment's availability
         Admin can fetch appointment availabilities from other cities as well
-  #### Don't's:
+  **Don't's:**
         Admin is unable to add an appointment for the same appointment type if one already exists
         Admin is unable to perform deletion if there is no appointment
         Admin was unable to book an appointment on the same day
         Admin was unable to book an appointment if it reached the capacity of the appointment type
         Admin was unable to book an appointment if the patient ID already exists
         Admin was unable to cancel the appointment if there was no appointment ID and patient ID
+	
 ### 2)Patient
-     #### Do's:    
+ **Do's:** 
         Patients can book an appointment  
         Patients can get an appointment schedule
         Patients can cancel an appointment
         Patients can swap an appointment
-     #### Don't's:	
+**Don't's:**	
         Patients were unable to book an appointment on the same day
         Patients were unable to book an appointment if it reached the capacity of the appointment type
 	Patients were unable to book an appointment if the patient ID already exists
