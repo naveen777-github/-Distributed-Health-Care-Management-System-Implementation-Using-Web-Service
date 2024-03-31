@@ -131,8 +131,8 @@ We need to ensure that these agents are using Webservices to communicate with th
 *	 Admin is unable to perform deletion if there is no appointment
 *	 Admin was unable to book an appointment on the same day
 *	 Admin was unable to book an appointment if it reached the capacity of the appointment type
-*        Admin was unable to book an appointment if the patient ID already exists
-*        Admin was unable to cancel the appointment if there was no appointment ID and patient ID
+*	 Admin was unable to book an appointment if the patient ID already exists
+*	 Admin was unable to cancel the appointment if there was no appointment ID and patient ID
 	
 ### 2)Patient
 
