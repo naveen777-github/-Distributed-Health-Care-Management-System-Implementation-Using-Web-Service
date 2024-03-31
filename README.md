@@ -20,8 +20,9 @@ We need to ensure that these agents are using Webservices to communicate with th
 ### Functions exclusive to admin:
 
 **addAppointment():** By using this function admin can add an appointment to the server. The admin cannot add an appointment for the same appointment type if one already exists.
-**removeAppointment():** This allows the administrator to remove a booked appointment. No deletion has been made if there is no appointment. In the unlikely event that a patient has made an appointment and 
-                              it is confirmed, cancel the appointment and make the patient's next available appointment.
+
+**removeAppointment():** This allows the administrator to remove a booked appointment. No deletion has been made if there is no appointment. In the unlikely event that a patient has made an appointment and it is confirmed, cancel the appointment and make the patient's next available appointment.
+
 **listAppointmentAvailability():** It returns the available spaces for appointment to the patient.
 
 
@@ -38,17 +39,17 @@ We need to ensure that these agents are using Webservices to communicate with th
 **swapAppointment():** To swap the patient ID from one appointment ID to another appointment ID.
 
 
-A unique adminID and patientID, respectively, are used to identify administrators and patients.
+* A unique adminID and patientID, respectively, are used to identify administrators and patients.
 
-Both admin and client maintain log records stored in a file.
+* Both admin and client maintain log records stored in a file.
 
-Admin able to perform patient operations but patient not able to perform admin operations.
+* Admin able to perform patient operations but patient not able to perform admin operations.
 
-There are three types of appointments dental, surgeon, and physician.
+* There are three types of appointments dental, surgeon, and physician.
 
-The appointment ID is a combination of four characters and six integers.
+* The appointment ID is a combination of four characters and six integers.
 
-**For example:** ”MTLA120324” represents Montreal(MTL),Afternoon(A),120324(day/month/year).
+* **For example:** ”MTLA120324” represents Montreal(MTL),Afternoon(A),120324(day/month/year).
 
 
 ## Implementation
@@ -116,37 +117,63 @@ The appointment ID is a combination of four characters and six integers.
 
 ### 1)Admin
   **Do's:**
+  
        * Admin able to perform both   patient and admin operations
+       
        * Admin can add an appointment
+       
        * Admin can remove an appointment
+       
        * Admin can list appointment's availability
+       
        * Admin can fetch appointment availabilities from other cities as well
+       
   **Don't's:**
-        Admin is unable to add an appointment for the same appointment type if one already exists
-        Admin is unable to perform deletion if there is no appointment
-        Admin was unable to book an appointment on the same day
-        Admin was unable to book an appointment if it reached the capacity of the appointment type
-        Admin was unable to book an appointment if the patient ID already exists
-        Admin was unable to cancel the appointment if there was no appointment ID and patient ID
+  
+        * Admin is unable to add an appointment for the same appointment type if one already exists
+	
+        * Admin is unable to perform deletion if there is no appointment
+	
+        * Admin was unable to book an appointment on the same day
+	
+        * Admin was unable to book an appointment if it reached the capacity of the appointment type
+	
+        * Admin was unable to book an appointment if the patient ID already exists
+	
+        * Admin was unable to cancel the appointment if there was no appointment ID and patient ID
 	
 ### 2)Patient
  **Do's:** 
-        Patients can book an appointment  
-        Patients can get an appointment schedule
-        Patients can cancel an appointment
-        Patients can swap an appointment
+        * Patients can book an appointment 
+	
+        * Patients can get an appointment schedule
+	
+        * Patients can cancel an appointment
+	
+        * Patients can swap an appointment
+	
 **Don't's:**	
-        Patients were unable to book an appointment on the same day
-        Patients were unable to book an appointment if it reached the capacity of the appointment type
-	Patients were unable to book an appointment if the patient ID already exists
-        Patients were unable to book an appointment if the patient ID, Appointment Type, or Appointment ID was Null	
-        Patients were unable to cancel the appointment if there was no appointment ID and patient ID
-        Patients can’t do every operation like admin.
-        Patients can swap an appointment
-	Do not swap if you cannot insert the patient into a new appointment.
-        Do not swap if you cannot cancel an old appointment.		
-        Do not swap if there is no availability to book.		
-        Do not swap if the patient has booked an old appointment.
+        * Patients were unable to book an appointment on the same day
+	
+        * Patients were unable to book an appointment if it reached the capacity of the appointment type
+	
+	* Patients were unable to book an appointment if the patient ID already exists
+ 
+        * Patients were unable to book an appointment if the patient ID, Appointment Type, or Appointment ID was Null	
+	
+        * Patients were unable to cancel the appointment if there was no appointment ID and patient ID
+	
+        * Patients can’t do every operation like admin.
+	
+        * Patients can swap an appointment
+	
+	* Do not swap if you cannot insert the patient into a new appointment.
+ 
+        * Do not swap if you cannot cancel an old appointment.	
+	
+        * Do not swap if there is no availability to book.
+	
+        * Do not swap if the patient has booked an old appointment.
 
 
 
