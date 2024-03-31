@@ -107,23 +107,22 @@ We need to ensure that these agents are using Webservices to communicate with th
 
 ### Working of Data structure:
 
-	You can access the inner concurrent hash map by first looking up the appointment type in the outer concurrent hash map.
+*	You can access the inner concurrent hash map by first looking up the appointment type in the outer concurrent hash map.
 
-	Once you have the inner concurrent hash map for a particular appointment type, you can access specific appointment details by looking up the appointment ID within that inner concurrent hash map.
+*	Once you have the inner concurrent hash map for a particular appointment type, you can access specific appointment details by looking up the appointment ID within that inner concurrent hash map.
 
-	With the appointment ID, you can retrieve both the patient ID list and the capacity for that appointment.
+*	With the appointment ID, you can retrieve both the patient ID list and the capacity for that appointment.
 
 ## Test Cases
 
 ### 1)Admin
 
   **Do's:**
-  
-       * Admin able to perform both   patient and admin operations
-       * Admin can add an appointment
-       * Admin can remove an appointment
-       * Admin can list appointment's availability
-       * Admin can fetch appointment availabilities from other cities as well
+  * 	Admin able to perform both   patient and admin operations
+  * 	Admin can add an appointment
+  * 	Admin can remove an appointment
+  * 	Admin can list appointment's availability
+  * 	Admin can fetch appointment availabilities from other cities as well
        
   **Don't's:**
   
