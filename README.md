@@ -4,15 +4,15 @@
 
 
 They are three separate servers, each situated in a different city, make up the distributed health care management system (DHMS):
-	Montreal(MTL)
-	Quebec(QUE)
-	Sherbrooke(SHE)
+* Montreal(MTL)
+* Quebec(QUE)
+* Sherbrooke(SHE)
 
 
 There are two categories of agents for this system:
 
-	Admin
-	Patient 
+* Admin
+* Patient 
 
 We need to ensure that these agents are using Webservices to communicate with the other servers using SOAP.
 
@@ -20,9 +20,9 @@ We need to ensure that these agents are using Webservices to communicate with th
 ### Functions exclusive to admin:
 
 **addAppointment():** By using this function admin can add an appointment to the server. The admin cannot add an appointment for the same appointment type if one already exists.
-**#### removeAppointment():** This allows the administrator to remove a booked appointment. No deletion has been made if there is no appointment. In the unlikely event that a patient has made an appointment and 
+**removeAppointment():** This allows the administrator to remove a booked appointment. No deletion has been made if there is no appointment. In the unlikely event that a patient has made an appointment and 
                               it is confirmed, cancel the appointment and make the patient's next available appointment.
-**#### listAppointmentAvailability():** It returns the available spaces for appointment to the patient.
+**listAppointmentAvailability():** It returns the available spaces for appointment to the patient.
 
 
 ### Functions exclusive to Patient:
@@ -116,11 +116,11 @@ The appointment ID is a combination of four characters and six integers.
 
 ### 1)Admin
   **Do's:**
-        Admin able to perform both   patient and admin operations
-        Admin can add an appointment
-        Admin can remove an appointment
-        Admin can list appointment's availability
-        Admin can fetch appointment availabilities from other cities as well
+       * Admin able to perform both   patient and admin operations
+       * Admin can add an appointment
+       * Admin can remove an appointment
+       * Admin can list appointment's availability
+       * Admin can fetch appointment availabilities from other cities as well
   **Don't's:**
         Admin is unable to add an appointment for the same appointment type if one already exists
         Admin is unable to perform deletion if there is no appointment
