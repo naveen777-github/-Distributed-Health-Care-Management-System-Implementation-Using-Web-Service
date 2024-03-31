@@ -1,0 +1,27 @@
+---TIME--->13/03/2024-01-25-05---RESPONSE--->Appointment_Added---ID--->MTLM120324---STATUS--->successfully completed
+---TIME--->13/03/2024-02-30-56---RESPONSE--->Appointment_Added---ID--->MTLM120324---STATUS--->successfully completed
+---TIME--->13/03/2024-02-30-57---RESPONSE--->Appointment_Added---ID--->QUEM120324---STATUS--->successfully completed
+---TIME--->13/03/2024-02-31-14---RESPONSE--->Appointment_Booked---ID--->MTLM120324---STATUS--->successfully completed
+---TIME--->13/03/2024-02-31-14---RESPONSE--->Appointment_Booked---ID--->MTLM120324---STATUS--->successfully completed
+---TIME--->13/03/2024-02-31-14---RESPONSE--->List_of_Appointments---ID--->{MTL={MTLM120324=0}}---STATUS--->successfully completed
+---TIME--->13/03/2024-02-30-56---RESPONSE--->Appointment_remove---ID--->MTLM120324---STATUS--->Successfully Removed
+---TIME--->16/03/2024-11-09-04---RESPONSE--->Appointment_Added---ID--->MTLM120324---STATUS--->successfully completed
+---TIME--->25/03/2024-04-21-11---RESPONSE--->Appointment_Added---ID--->MTLM120324---STATUS--->successfully completed
+---TIME--->25/03/2024-04-21-25---RESPONSE--->Appointment_Booked---ID--->MTLM120324---STATUS--->successfully completed
+---TIME--->25/03/2024-04-21-11---RESPONSE--->Appointment_Added---ID--->MTLA130424---STATUS--->successfully completed
+---TIME--->25/03/2024-04-21-12---RESPONSE--->Appointment_Added---ID--->QUEM120324---STATUS--->successfully completed
+---TIME--->25/03/2024-04-21-25---RESPONSE--->List_of_Appointments---ID--->{QUE={QUEM120324=2}, MTL={MTLM120324=1}}---STATUS--->successfully completed
+---TIME--->25/03/2024-04-21-25---RESPONSE--->Appointment_Schedule_Quebec---ID--->{}---STATUS--->successfully completed
+---TIME--->25/03/2024-04-21-25---RESPONSE--->Appointments_are_not_swapped---ID--->MTLP1234---STATUS--->Failed
+---TIME--->25/03/2024-04-21-25---RESPONSE--->Appointment_Booking_Failed---ID--->MTLM120324---STATUS--->Failed
+---TIME--->25/03/2024-04-21-25---RESPONSE--->List_of_Appointments---ID--->{QUE={QUEM120324=2}, MTL={MTLM120324=1}}---STATUS--->successfully completed
+---TIME--->25/03/2024-04-21-25---RESPONSE--->Appointments_are_swapped---ID--->MTLP1234---STATUS--->successfully completed
+---TIME--->25/03/2024-04-21-25---RESPONSE--->List_of_Appointments---ID--->{QUE={QUEM120324=1}, MTL={MTLM120324=2}}---STATUS--->successfully completed
+---TIME--->25/03/2024-08-49-14---RESPONSE--->Appointment_Added---ID--->MTLM120324---STATUS--->successfully completed
+---TIME--->25/03/2024-08-49-24---RESPONSE--->Appointment_Booked---ID--->MTLM120324---STATUS--->successfully completed
+---TIME--->25/03/2024-08-49-16---RESPONSE--->Appointment_Added---ID--->QUEM130424---STATUS--->successfully completed
+---TIME--->25/03/2024-08-49-24---RESPONSE--->Appointments_are_swapped---ID--->MTLP1234---STATUS--->successfully completed
+---TIME--->25/03/2024-08-49-24---RESPONSE--->List_of_Appointments---ID--->{QUE={QUEM130424=1}, MTL={MTLM120324=2}}---STATUS--->successfully completed
+---TIME--->31/03/2024-02-09-53---RESPONSE--->Appointment_Added---ID--->MTLM120324---STATUS--->successfully completed
+---TIME--->31/03/2024-02-37-44---RESPONSE--->Appointment_Added---ID--->MTLM120324---STATUS--->successfully completed
+---TIME--->31/03/2024-02-37-50---RESPONSE--->Appointment_Booked---ID--->MTLM120324---STATUS--->successfully completed
