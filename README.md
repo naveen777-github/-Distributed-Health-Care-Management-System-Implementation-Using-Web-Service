@@ -54,33 +54,33 @@ We need to ensure that these agents are using Webservices to communicate with th
 
 ## Implementation
 
-	In this project, I created the main server file and publish the endpoint using the Endpoint class.
+*	In this project, I created the main server file and publish the endpoint using the Endpoint class.
 
-	In publish method I pass the url on port 8081which I want to host my three services.
+*	In publish method I pass the url on port 8081which I want to host my three services.
 
-	I removed the CORBA implementation and replaced the code with @web service, and @SoapBinding annotations in services,@webmethod in the interface.
+*	I removed the CORBA implementation and replaced the code with @web service, and @SoapBinding annotations in services,@webmethod in the interface.
 
-	In the client, used URL, and QName objects to call the web services.
+*	In the client, used URL, and QName objects to call the web services.
 
-	This project includes the usage of concurrent hash maps where the content from the client will be arranged like key and value.
+*	This project includes the usage of concurrent hash maps where the content from the client will be arranged like key and value.
 
-	Also, includes ArrayList where the patientID will be stored.
+*	Also, includes ArrayList where the patientID will be stored.
 
-	 After implementing servers to access the methods in servers I built an interface where all the functions are arranged.
+*	 After implementing servers to access the methods in servers I built an interface where all the functions are arranged.
 
-	By using the functions in the interface can call them in the client.
+*	By using the functions in the interface can call them in the client.
 
-	The admin and patient fetch the information from the user and the process will be done by the respective server according to input.
+*	The admin and patient fetch the information from the user and the process will be done by the respective server according to input.
 
-	Here the admin can perform both patient and admin operations while the patient can only perform the patient operations.
+*	Here the admin can perform both patient and admin operations while the patient can only perform the patient operations.
 
-	The three servers were communicating with the SOAP.
+*	The three servers were communicating with the SOAP.
 
-	At the end of every execution, the result will be returned in the form of logs to a text file named adminfile.txt, patientfile.txt, and server.txt.
+*	At the end of every execution, the result will be returned in the form of logs to a text file named adminfile.txt, patientfile.txt, and server.txt.
 
-	The most important part of this project implementation is establishing SOAP Binding. Because without using this we can’t implement the communication between servers.
+*	The most important part of this project implementation is establishing SOAP Binding. Because without using this we can’t implement the communication between servers.
 
-	The hardest part of the implementation for me in this project is the swap appointment. Because to fetch the appointment from another server we have to establish intercommunication between them which it requires UDP/IP sockets.
+*	The hardest part of the implementation for me in this project is the swap appointment. Because to fetch the appointment from another server we have to establish intercommunication between them which it requires UDP/IP sockets.
 
 ## Class Diagram
 
@@ -116,63 +116,45 @@ We need to ensure that these agents are using Webservices to communicate with th
 ## Test Cases
 
 ### 1)Admin
+
   **Do's:**
   
        * Admin able to perform both   patient and admin operations
-       
        * Admin can add an appointment
-       
        * Admin can remove an appointment
-       
        * Admin can list appointment's availability
-       
        * Admin can fetch appointment availabilities from other cities as well
        
   **Don't's:**
   
         * Admin is unable to add an appointment for the same appointment type if one already exists
-	
         * Admin is unable to perform deletion if there is no appointment
-	
         * Admin was unable to book an appointment on the same day
-	
         * Admin was unable to book an appointment if it reached the capacity of the appointment type
-	
         * Admin was unable to book an appointment if the patient ID already exists
-	
         * Admin was unable to cancel the appointment if there was no appointment ID and patient ID
 	
 ### 2)Patient
+
  **Do's:** 
+ 
         * Patients can book an appointment 
-	
         * Patients can get an appointment schedule
-	
         * Patients can cancel an appointment
-	
         * Patients can swap an appointment
 	
 **Don't's:**	
+
         * Patients were unable to book an appointment on the same day
-	
         * Patients were unable to book an appointment if it reached the capacity of the appointment type
-	
 	* Patients were unable to book an appointment if the patient ID already exists
- 
         * Patients were unable to book an appointment if the patient ID, Appointment Type, or Appointment ID was Null	
-	
         * Patients were unable to cancel the appointment if there was no appointment ID and patient ID
-	
         * Patients can’t do every operation like admin.
-	
         * Patients can swap an appointment
-	
 	* Do not swap if you cannot insert the patient into a new appointment.
- 
         * Do not swap if you cannot cancel an old appointment.	
-	
         * Do not swap if there is no availability to book.
-	
         * Do not swap if the patient has booked an old appointment.
 
 
