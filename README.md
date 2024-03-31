@@ -119,20 +119,20 @@ We need to ensure that these agents are using Webservices to communicate with th
 
   **Do's:**
   
-  * 	Admin able to perform both   patient and admin operations
-  * 	Admin can add an appointment
-  * 	Admin can remove an appointment
-  * 	Admin can list appointment's availability
-  * 	Admin can fetch appointment availabilities from other cities as well
+* 	Admin able to perform both   patient and admin operations
+* 	Admin can add an appointment
+* 	Admin can remove an appointment
+* 	Admin can list appointment's availability
+* 	Admin can fetch appointment availabilities from other cities as well
        
   **Don't's:**
   
-  *	 Admin is unable to add an appointment for the same appointment type if one already exists
-  *	 Admin is unable to perform deletion if there is no appointment
-  *	 Admin was unable to book an appointment on the same day
-  *	 Admin was unable to book an appointment if it reached the capacity of the appointment type
-  *      Admin was unable to book an appointment if the patient ID already exists
-  *      Admin was unable to cancel the appointment if there was no appointment ID and patient ID
+*	 Admin is unable to add an appointment for the same appointment type if one already exists
+*	 Admin is unable to perform deletion if there is no appointment
+*	 Admin was unable to book an appointment on the same day
+*	 Admin was unable to book an appointment if it reached the capacity of the appointment type
+*        Admin was unable to book an appointment if the patient ID already exists
+*        Admin was unable to cancel the appointment if there was no appointment ID and patient ID
 	
 ### 2)Patient
 
