@@ -118,6 +118,7 @@ We need to ensure that these agents are using Webservices to communicate with th
 ### 1)Admin
 
   **Do's:**
+  
   * 	Admin able to perform both   patient and admin operations
   * 	Admin can add an appointment
   * 	Admin can remove an appointment
@@ -130,31 +131,31 @@ We need to ensure that these agents are using Webservices to communicate with th
   *	 Admin is unable to perform deletion if there is no appointment
   *	 Admin was unable to book an appointment on the same day
   *	 Admin was unable to book an appointment if it reached the capacity of the appointment type
-  * 	 Admin was unable to book an appointment if the patient ID already exists
-  *  	 Admin was unable to cancel the appointment if there was no appointment ID and patient ID
+  *      Admin was unable to book an appointment if the patient ID already exists
+  *      Admin was unable to cancel the appointment if there was no appointment ID and patient ID
 	
 ### 2)Patient
 
  **Do's:** 
  
-        *	 Patients can book an appointment 
-        *	 Patients can get an appointment schedule
-        * 	Patients can cancel an appointment
-        * 	Patients can swap an appointment
+*	Patients can book an appointment 
+*	Patients can get an appointment schedule
+* 	Patients can cancel an appointment
+* 	Patients can swap an appointment
 	
 **Don't's:**	
 
-        * 	Patients were unable to book an appointment on the same day
-        * 	Patients were unable to book an appointment if it reached the capacity of the appointment type
-	* 	Patients were unable to book an appointment if the patient ID already exists
-        * 	Patients were unable to book an appointment if the patient ID, Appointment Type, or Appointment ID was Null	
-        * 	Patients were unable to cancel the appointment if there was no appointment ID and patient ID
-        * 	Patients can’t do every operation like admin.
-        * 	Patients can swap an appointment
-	* 	Do not swap if you cannot insert the patient into a new appointment.
-        * 	Do not swap if you cannot cancel an old appointment.	
-        * 	Do not swap if there is no availability to book.
-        * 	Do not swap if the patient has booked an old appointment.
+* 	Patients were unable to book an appointment on the same day
+* 	Patients were unable to book an appointment if it reached the capacity of the appointment type
+* 	Patients were unable to book an appointment if the patient ID already exists
+* 	Patients were unable to book an appointment if the patient ID, Appointment Type, or Appointment ID was Null	
+* 	Patients were unable to cancel the appointment if there was no appointment ID and patient ID
+* 	Patients can’t do every operation like admin.
+* 	Patients can swap an appointment
+* 	Do not swap if you cannot insert the patient into a new appointment.
+* 	Do not swap if you cannot cancel an old appointment.	
+* 	Do not swap if there is no availability to book.
+* 	Do not swap if the patient has booked an old appointment.
 
 
 
